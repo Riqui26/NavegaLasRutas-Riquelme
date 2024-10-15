@@ -17,3 +17,19 @@ export const getProducts = () => {
         }, 500)
     })
 }
+
+export const getProductsById = (productId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productId))
+        }, 500)
+    })
+}
+
+export const getProductsByCategory = (productCategory) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.category === productCategory))
+        }, 500)
+    })
+}
